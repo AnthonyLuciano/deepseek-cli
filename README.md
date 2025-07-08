@@ -1,18 +1,18 @@
 # DeepSeek CLI Assistant
 
-Um assistente de linha de comando para interagir com a API do DeepSeek, usando o contexto dos arquivos do seu projeto para responder perguntas de forma inteligente.
+A command-line assistant to interact with the DeepSeek API, using your project files as context to answer questions intelligently.
 
-## Instalação
+## Installation
 
 ### Arch Linux (AUR)
 
-Você pode instalar diretamente do AUR usando um AUR helper, como o `yay`:
+You can install directly from the AUR using an AUR helper like `yay`:
 
 ```bash
 yay -S deepseek-cli
 ```
 
-Ou manualmente:
+Or manually:
 
 ```bash
 git clone https://aur.archlinux.org/deepseek-cli.git
@@ -20,7 +20,7 @@ cd deepseek-cli
 makepkg -si
 ```
 
-Após a instalação, use o comando:
+After installation, run the command:
 
 ```bash
 deepseekcli
@@ -28,83 +28,84 @@ deepseekcli
 
 ---
 
-### Instalação via pip (para desenvolvimento)
+### Installation via pip (for development)
 
 ```bash
-git clone https://github.com/seuusuario/deepseek-cli-assistant.git
+git clone https://github.com/yourusername/deepseek-cli-assistant.git
 cd deepseek-cli-assistant
 pip install .
 ```
 
-Ou, se preferir, crie um link simbólico:
+Or, if you prefer, create a symbolic link:
 
 ```bash
-sudo ln -s /caminho/para/main.py /usr/local/bin/deepseek
+sudo ln -s /path/to/main.py /usr/local/bin/deepseek
 ```
 
 ---
 
-## Configuração
+## Configuration
 
-Crie um arquivo `.env` na raiz do projeto com:
+Create a `.env` file in the root of the project with:
 
 ```
-API_KEY=sua-chave-deepseek
+API_KEY=your-deepseek-api-key
 MODEL=deepseek-chat
 BASE_URL=https://api.deepseek.com
 ```
 
 ---
 
-## Uso
+## Usage
 
-Execute o comando:
+Run the command:
 
 ```bash
 deepseekcli
 ```
 
-Siga as instruções no terminal:
+Follow the terminal instructions:
 
-- Digite o caminho do projeto (arquivo ou pasta)
-- Faça perguntas ou use comandos especiais:
-    - `:file` — Trocar o projeto/contexto
-    - `:ask` — Fazer uma pergunta explicitamente
-    - `:exit` — Sair do assistente
+* Enter the path to the project (file or folder)
+* Ask questions or use special commands:
 
-Exemplo:
+  * `:file` — Change project/context
+  * `:ask` — Explicitly ask a question
+  * `:exit` — Exit the assistant
+
+Example:
 
 ```
-📁 Caminho do projeto (pasta ou arquivo): ./meu-projeto
-Contexto carregado!
-Digite uma pergunta ou comando (:file, :ask, :exit): Como funciona o arquivo main.py?
-Assistente: O arquivo main.py é responsável por...
+📁 Project path (folder or file): ./my-project
+Context loaded!
+Type a question or command (:file, :ask, :exit): How does main.py work?
+Assistant: The main.py file is responsible for...
 ```
 
 ---
 
-## Funcionalidades
+## Features
 
-- ✅ Usa sua API do DeepSeek
-- 📁 Lê arquivos do projeto (um ou vários)
-- 🧠 Recebe perguntas do usuário
-- 🗨️ Responde no terminal com contexto dos arquivos
-- 🔁 Funciona em loop (tipo chat)
-- 🧹 Interface limpa e simples (usa [rich](https://github.com/Textualize/rich))
-- ⌨️ Aceita comandos como `:file`, `:ask`, `:exit`
-- 🔒 Carrega configurações do `.env` (API_KEY, MODEL, BASE_URL)
+* ✅ Uses your DeepSeek API key
+* 📁 Reads project files (single or multiple)
+* 🧠 Accepts user questions
+* 🗨️ Answers in the terminal using file context
+* 🔁 Works in a loop (chat-style)
+* 🧹 Clean and simple interface (uses [rich](https://github.com/Textualize/rich))
+* ⌨️ Supports commands like `:file`, `:ask`, `:exit`
+* 🔒 Loads settings from `.env` (API\_KEY, MODEL, BASE\_URL)
 
 ---
 
-## Dependências
+## Dependencies
 
-- Python 3.7+
-- requests
-- rich
-- tqdm
-- python-dotenv
+* Python 3.7+
+* requests
+* rich
+* tqdm
+* python-dotenv
 
-Instale todas com:
+Install all dependencies with:
 
 ```bash
 pip install -r requirements.txt
@@ -112,16 +113,18 @@ pip install -r requirements.txt
 
 ---
 
-## Empacotamento para Arch Linux
+## Packaging for Arch Linux
 
-Para empacotar manualmente, use o PKGBUILD fornecido neste repositório.
+To manually package, use the provided PKGBUILD in this repository.
 
 ---
 
-## Licença
+## License
 
 MIT
 
 ---
 
-Feito com ❤️ por [Anthony](https://github.com/AnthonyLuciano)
+Made with ❤️ by [Anthony](https://github.com/AnthonyLuciano) aka "mrmedicmain"
+
+---
